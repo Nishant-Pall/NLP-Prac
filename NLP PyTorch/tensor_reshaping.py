@@ -28,7 +28,9 @@ z = x.permute(0, 2, 1)  # dim 0 at 0, dim 2 at 1 and dim 1 at 2
 print(z.shape)
 
 x = torch.arange(10)
-print(x.unsqueeze(0).shape)
-print(x.unsqueeze(1).shape)
+print(x.unsqueeze(0))
+print(x.unsqueeze(1))
 
 x = torch.arange(10).unsqueeze(0).unsqueeze(1)  # 1x1x10
+z = x.squeeze(1)
+print(z)
