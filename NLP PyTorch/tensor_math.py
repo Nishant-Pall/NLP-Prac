@@ -74,3 +74,32 @@ out_bmm = torch.bmm(tensor1, tensor2)  # (batch, n, p)
 print(out_bmm)
 
 # Example of broadcasting
+x1 = torch.rand((5, 5))
+x2 = torch.rand((1, 5))
+print(x1)
+print(x2)
+z = x1-x2
+print(z)
+
+# Other useful tensor operations
+sum_x = torch.sum(x, dim=0)
+values, indices = torch.max(x, dim=0)  # x.mac(dim=0)
+values, indices = torch.min(x, dim=0)
+abs_x = torch.abs(x)
+z = torch.argmax(x, dim=0)
+z = torch.argmin(x, dim=0)
+z = torch.mean(x.float(), dim=0)
+z = torch.eq(x, y)
+print(z)
+sorted_y, indices = torch.sort(y, dim=0, descending=False)
+print(sorted_y)
+
+# Clamps the values to min and max
+z = torch.clamp(x, min=0, max=1)
+print(z)
+
+x = torch.tensor([1, 0, 1, 1, 1, 1], dtype=torch.bool)
+z1 = torch.any(x)
+z2 = torch.all(x)
+print(z1)
+print(z2)
