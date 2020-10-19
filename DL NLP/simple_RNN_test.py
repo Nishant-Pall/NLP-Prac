@@ -57,4 +57,7 @@ def gru2():
     print(f'h:{h}')
 
 
+lstm1()
+lstm2()
+gru1()
 gru2()
